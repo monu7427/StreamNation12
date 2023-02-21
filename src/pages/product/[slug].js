@@ -27,8 +27,8 @@ const ProductPage = ({ Product, Products }) => {
                         <h1>
                             ₹{item.price}/
                             {item.count > 1
-                                ? item.period
-                                : item.period.slice(0, -1)}
+                                ? item.count + item.period
+                                : item.count + item.period.slice(0, -1)}
                         </h1>
                         <p>
                             Description: <span>{item.description}</span>

@@ -14,8 +14,9 @@ const ProductCard = ({ product }) => {
                 <h2>
                     ₹{product.items[0].price}/
                     {product.items[0].count > 1
-                        ? product.items[0].period
-                        : product.items[0].period.slice(0, -1)}
+                        ? product.items[0].count + product.items[0].period
+                        : product.items[0].count +
+                          product.items[0].period.slice(0, -1)}
                 </h2>
                 {product.items.length > 1 ? (
                     <h4>
