@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 const Navbar = () => {
     const [NavbarStatus, setNavbarStatus] = useState(false);
@@ -5,7 +6,9 @@ const Navbar = () => {
         <section id="Navbar">
             <div className="main-bar">
                 <div className="logo">
-                    <img src="/logo.png" alt="logo" />
+                    <Link href="/">
+                        <img src="/logo.png" alt="logo" />
+                    </Link>
                 </div>
                 <button onClick={() => setNavbarStatus(!NavbarStatus)}>
                     {NavbarStatus ? (

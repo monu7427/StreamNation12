@@ -1,8 +1,10 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ProductCard from "@/components/ProductCard";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const Home = () => {
+const Home = (props) => {
     const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
     useEffect(() => {
         try {
@@ -11,6 +13,11 @@ const Home = () => {
         } catch (e) {}
         return () => {};
     }, []);
+
+    const ProductsRender = () =>
+        props.Products.map((product, index) => {
+            return <ProductCard key={index} product={product} />;
+        });
 
     return (
         <section id="Home">
@@ -61,77 +68,22 @@ const Home = () => {
                     <li>Music</li>
                 </ul>
                 <div className="cards">
-                    <div className="card">
-                        <img
-                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
-                            alt="netflix"
-                        />
-                        <div className="card-content">
-                            <h5>Starting from</h5>
-                            <h2>₹79/month</h2>
-                            <h4>+6 other plans</h4>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
-                            alt="netflix"
-                        />
-                        <div className="card-content">
-                            <h5>Starting from</h5>
-                            <h2>₹79/month</h2>
-                            <h4>+6 other plans</h4>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
-                            alt="netflix"
-                        />
-                        <div className="card-content">
-                            <h5>Starting from</h5>
-                            <h2>₹79/month</h2>
-                            <h4>+6 other plans</h4>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
-                            alt="netflix"
-                        />
-                        <div className="card-content">
-                            <h5>Starting from</h5>
-                            <h2>₹79/month</h2>
-                            <h4>+6 other plans</h4>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
-                            alt="netflix"
-                        />
-                        <div className="card-content">
-                            <h5>Starting from</h5>
-                            <h2>₹79/month</h2>
-                            <h4>+6 other plans</h4>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img
-                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
-                            alt="netflix"
-                        />
-                        <div className="card-content">
-                            <h5>Starting from</h5>
-                            <h2>₹79/month</h2>
-                            <h4>+6 other plans</h4>
-                        </div>
-                    </div>
+                    <ProductsRender />
                 </div>
             </div>
             <Footer />
         </section>
     );
 };
+
+export async function getServerSideProps(context) {
+    let Products = await axios.get(process.env.NEXT_PUBLIC_DATABASE_URL);
+    Products = Products.data;
+    return {
+        props: {
+            Products,
+        }, // will be passed to the page component as props
+    };
+}
 
 export default Home;
