@@ -52,6 +52,82 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <div className="all-platforms">
+                <h1 className="text-xl font-black text-center">Our Services</h1>
+                <ul className="filters">
+                    <li className="active">All</li>
+                    <li>OTT</li>
+                    <li>Music</li>
+                </ul>
+                <div className="cards">
+                    <div className="card">
+                        <img
+                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
+                            alt="netflix"
+                        />
+                        <div className="card-content">
+                            <h5>Starting from</h5>
+                            <h2>₹79/month</h2>
+                            <h4>+6 other plans</h4>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <img
+                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
+                            alt="netflix"
+                        />
+                        <div className="card-content">
+                            <h5>Starting from</h5>
+                            <h2>₹79/month</h2>
+                            <h4>+6 other plans</h4>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <img
+                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
+                            alt="netflix"
+                        />
+                        <div className="card-content">
+                            <h5>Starting from</h5>
+                            <h2>₹79/month</h2>
+                            <h4>+6 other plans</h4>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <img
+                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
+                            alt="netflix"
+                        />
+                        <div className="card-content">
+                            <h5>Starting from</h5>
+                            <h2>₹79/month</h2>
+                            <h4>+6 other plans</h4>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <img
+                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
+                            alt="netflix"
+                        />
+                        <div className="card-content">
+                            <h5>Starting from</h5>
+                            <h2>₹79/month</h2>
+                            <h4>+6 other plans</h4>
+                        </div>
+                    </div>
+                    <div className="card">
+                        <img
+                            src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png"
+                            alt="netflix"
+                        />
+                        <div className="card-content">
+                            <h5>Starting from</h5>
+                            <h2>₹79/month</h2>
+                            <h4>+6 other plans</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
