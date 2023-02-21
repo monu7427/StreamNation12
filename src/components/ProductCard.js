@@ -18,7 +18,12 @@ const ProductCard = ({ product }) => {
                         : product.items[0].period.slice(0, -1)}
                 </h2>
                 {product.items.length > 1 ? (
-                    <h4>+{product.items.length} other plans</h4>
+                    <h4>
+                        +{product.items.length - 1}{" "}
+                        {product.items.length > 2
+                            ? "more plans"
+                            : "another plan"}
+                    </h4>
                 ) : (
                     <h4>and more</h4>
                 )}
