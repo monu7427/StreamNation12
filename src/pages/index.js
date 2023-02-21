@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React, { useEffect, useState } from "react";
 
@@ -41,7 +42,7 @@ const Home = () => {
                         </li>
                         <li>
                             <i className="bx bx-time-five"></i>
-                            <p>24h Customer care</p>
+                            <p>24h Customer support</p>
                         </li>
                     </ul>
                     <div className="button">
@@ -128,6 +129,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </section>
     );
 };
