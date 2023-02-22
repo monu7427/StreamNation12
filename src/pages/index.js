@@ -36,12 +36,12 @@ const Home = (props) => {
                     </h2>
                     <ul>
                         <li>
-                            <i className="bx bx-check-shield"></i>{" "}
-                            <p>30days warranty</p>
+                            <i className="bx bx-revision"></i>
+                            <p>100% Replacement warranty</p>
                         </li>
                         <li>
-                            <i className="bx bx-revision"></i>
-                            <p>30days free replacement</p>
+                            <i className="bx bx-check-shield"></i>{" "}
+                            <p>Premium quality accounts</p>
                         </li>
                         <li>
                             <i className="bx bx-time-five"></i>
