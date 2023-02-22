@@ -25,7 +25,7 @@ const ProductPage = ({ Product, Products }) => {
                 if (!visited) {
                     localStorage.setItem("pvisited", true);
                     axios.get(
-                        "https://api.countapi.xyz/update/fiverxottproductunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
+                        "https://api.countapi.xyz/hit/fiverxottproductunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
                     );
                 }
             } catch (e) {}
