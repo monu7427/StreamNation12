@@ -70,7 +70,6 @@ img {
 #Home {
     .main-banner {
         background-color: $secondary-color;
-        // min-height: 100vh;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -80,8 +79,9 @@ img {
                 border-radius: 10px;
             }
         }
-        .container {
+        .text-container {
             gap: 30px;
+            width: 100%;
             padding: 20px;
             h1 {
                 font-weight: 900;
@@ -177,7 +177,7 @@ img {
 }
 
 #ProductPage {
-    .container {
+    .main-container {
         padding: 20px;
         img {
             border-radius: 10px;
@@ -272,6 +272,235 @@ img {
                     color: $primary-color;
                 }
             }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #Home {
+        .main-banner {
+            background-color: $secondary-color;
+            // min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+            align-items: center;
+            padding: 50px 20px;
+            .img-container {
+                padding: 20px;
+                .MainSwiper {
+                    // width: 100%;
+                    display: grid;
+                    overflow: hidden;
+                    .mySwiper {
+                        width: 100%;
+                        img {
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .all-platforms {
+        margin: 50px 20px;
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+            li {
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                padding: 0px 15px;
+                border-radius: 20px;
+                font-weight: 700;
+                font-size: 12px;
+            }
+            li.active {
+                background-color: $primary-color;
+                color: $pure-white;
+            }
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+    }
+
+    #Footer {
+        margin: 100px 0 0 0;
+        background-color: $secondary-color;
+
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
+            border-bottom: 1px solid $primary-color;
+            padding: 20px 10%;
+        }
+        .main {
+            padding: 20px 10%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .quick {
+            padding: 20px;
+            margin: 20px 0 0 0;
+            h3 {
+                font-size: 15px;
+                font-weight: 700;
+            }
+            ul {
+                margin: 10px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li {
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+        }
+        .report {
+            padding: 0 20px;
+            h3 {
+                font-size: 15px;
+                font-weight: 700;
+                margin: 10px 0;
+            }
+            p {
+                font-size: 13px;
+                a {
+                    text-decoration: underline;
+                    color: $primary-color;
+                    font-weight: 700;
+                }
+            }
+        }
+        .bottom {
+            margin: 20px 0 0 0;
+            border-top: 1px solid $primary-color;
+            font-size: 10px;
+            text-align: center;
+            font-weight: 700;
+            padding: 20px 0;
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .all-platforms {
+        margin: 50px 10%;
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+            li {
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                padding: 0px 15px;
+                border-radius: 20px;
+                font-weight: 700;
+                font-size: 12px;
+            }
+            li.active {
+                background-color: $primary-color;
+                color: $pure-white;
+            }
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+    }
+
+    #ProductPage {
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 50px;
+            gap: 50px;
+            .image {
+                img {
+                    border-radius: 10px;
+                    position: sticky;
+                    top: 0;
+                }
+            }
+            .pricing-cards {
+                display: grid;
+                margin: 20px 0;
+                row-gap: 20px;
+                .pricing-card {
+                    background-color: $secondary-color;
+                    padding: 20px;
+                    h2 {
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 800;
+                    }
+                    h1 {
+                        font-size: 24px;
+                        font-weight: 900;
+                        text-align: center;
+                        margin: 10px 0;
+                    }
+                    p {
+                        font-size: 14px;
+                        font-weight: 700;
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                    button {
+                        margin: 20px 0 0 0;
+                        background-color: $primary-color;
+                        color: $pure-white;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .all-platforms {
+        margin: 100px 20%;
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 40px;
+            li {
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                padding: 0px 15px;
+                border-radius: 20px;
+                font-weight: 700;
+                font-size: 12px;
+            }
+            li.active {
+                background-color: $primary-color;
+                color: $pure-white;
+            }
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 100%;
         }
     }
 }

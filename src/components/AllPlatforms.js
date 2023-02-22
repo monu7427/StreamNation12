@@ -39,15 +39,19 @@ const AllPlatforms = ({ Products }) => {
     return (
         <div className="all-platforms">
             <h1 className="text-xl font-black text-center">Our Services</h1>
-            <ul className="filters">
+            <ul className="filters ">
                 <li
-                    className={`${CategorySelected === "all" ? "active" : ""}`}
+                    className={`${
+                        CategorySelected === "all" ? "active" : ""
+                    } cursor-pointer`}
                     onClick={() => setCategorySelected("all")}
                 >
                     All
                 </li>
                 <li
-                    className={`${CategorySelected === "ott" ? "active" : ""}`}
+                    className={`${
+                        CategorySelected === "ott" ? "active" : ""
+                    } cursor-pointer`}
                     onClick={() => setCategorySelected("ott")}
                 >
                     OTT
@@ -55,13 +59,13 @@ const AllPlatforms = ({ Products }) => {
                 <li
                     className={`${
                         CategorySelected === "music" ? "active" : ""
-                    }`}
+                    } cursor-pointer`}
                     onClick={() => setCategorySelected("music")}
                 >
                     Music
                 </li>
             </ul>
-            <div className="cards">
+            <div className="cards  ">
                 <ProductsRender />
             </div>
         </div>

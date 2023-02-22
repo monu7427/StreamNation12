@@ -6,6 +6,32 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 const ProductPage = ({ Product, Products }) => {
+    const [NavbarHeight, setNavbarHeight] = useState(0);
+
+    useEffect(() => {
+        try {
+            const NavbarHeight = document.querySelector("#Navbar").clientHeight;
+            setNavbarHeight(NavbarHeight);
+        } catch (e) {}
+    }, []);
+
+    useEffect(() => {
+        return () => {
+            axios.get(
+                "https://api.countapi.xyz/hit/fiverxottproduct/85ff71e4-b14b-4d77-a1f9-90efd2eac344"
+            );
+            try {
+                const visited = localStorage.getItem("pvisited");
+                if (!visited) {
+                    localStorage.setItem("pvisited", true);
+                    axios.get(
+                        "https://api.countapi.xyz/hit/fiverxottproductunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
+                    );
+                }
+            } catch (e) {}
+        };
+    }, []);
+
     const PriceCardRender = () =>
         Product.items.map((item, index) => {
             return (
@@ -57,8 +83,14 @@ const ProductPage = ({ Product, Products }) => {
     return (
         <section id="ProductPage">
             <Navbar />
-            <div className="container">
-                <img src={Product.banner} alt="banner" />
+            <div className="main-container">
+                <div className="image">
+                    <img
+                        src={Product.banner}
+                        alt="banner"
+                        style={{ top: NavbarHeight + 50 + "px" }}
+                    />
+                </div>
 
                 <div className="content my-4">
                     <h1 className="text-2xl font-bold text-center">

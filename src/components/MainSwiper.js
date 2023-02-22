@@ -8,7 +8,7 @@ import { Autoplay } from "swiper";
 
 export default function MainSwiper() {
     return (
-        <>
+        <div className="MainSwiper">
             <Swiper
                 className="mySwiper"
                 spaceBetween={30}
@@ -32,6 +32,6 @@ export default function MainSwiper() {
                     <img src="/images/banner3.png" alt="banner" />
                 </SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 }

@@ -5,11 +5,29 @@ import axios from "axios";
 import AllPlatforms from "@/components/AllPlatforms";
 import Link from "next/link";
 import MainSwiper from "@/components/MainSwiper";
+import axios from "axios";
 
 const Home = (props) => {
     const [NavbarHeight, setNavbarHeight] = useState(0);
     const [TopBannerHeight, setTopBannerHeight] = useState(0);
     const [MainBannerHeight, setMainBannerHeight] = useState();
+
+    useEffect(() => {
+        return () => {
+            axios.get(
+                "https://api.countapi.xyz/hit/fiverxott/85ff71e4-b14b-4d77-a1f9-90efd2eac344"
+            );
+            try {
+                const visited = localStorage.getItem("visited");
+                if (!visited) {
+                    localStorage.setItem("visited", true);
+                    axios.get(
+                        "https://api.countapi.xyz/hit/fiberxottunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
+                    );
+                }
+            } catch (e) {}
+        };
+    }, []);
 
     useEffect(() => {
         try {
@@ -19,9 +37,11 @@ const Home = (props) => {
                 document.querySelector("#TopBanner").clientHeight;
             setTopBannerHeight(TopBannerHeight);
             const totalPageHeight = window.innerHeight;
-            setMainBannerHeight(
-                totalPageHeight - NavbarHeight - TopBannerHeight
-            );
+            if (window.innerWidth < 768) {
+                setMainBannerHeight(
+                    totalPageHeight - NavbarHeight - TopBannerHeight
+                );
+            }
         } catch (e) {}
 
         return () => {};
@@ -45,7 +65,7 @@ const Home = (props) => {
                 <div className="img-container">
                     <MainSwiper />
                 </div>
-                <div className="container flex items-center flex-col">
+                <div className="text-container flex items-center flex-col w-full">
                     <p className="text-center font-medium text-gray-400 text-sm w-3/4">
                         Are you still paying Hundreds in Premium of OTT
                         platform?
