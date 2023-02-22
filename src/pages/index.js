@@ -32,7 +32,7 @@ const Home = (props) => {
                     </p>
                     <h1 className="w-3/4 text-center">Fiberxott.com</h1>
                     <h2 className="w-3/4 text-center text-lg font-bold">
-                        Subscriptions starting from ₹88/month
+                        For new customer YouTube premium ₹99/month
                     </h2>
                     <ul>
                         <li>
@@ -52,7 +52,7 @@ const Home = (props) => {
                         <Link
                             href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%0A*Coupon%20code%3A*%23FirstTime%0AI%20want%20Youtube%20Premium%20account.%20Is%20discount%20still%20available%20on%20your%20website.%0A`}
                         >
-                            <button>Save 30-70% on YT premium</button>
+                            <button>Save 30% on YT premium</button>
                         </Link>
                         <p className="text-[10px] text-gray-400 text-right">
                             only for limited users
