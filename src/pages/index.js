@@ -12,6 +12,22 @@ const Home = (props) => {
     const [MainBannerHeight, setMainBannerHeight] = useState();
 
     useEffect(() => {
+        axios.get(
+            "https://api.countapi.xyz/hit/fiverxott/e74ebe4f-4c0b-4da0-a62d-d1e915da349c"
+        );
+        try {
+            const visited = localStorage.getItem("visited");
+            if (!visited) {
+                localStorage.setItem("visited", true);
+                axios.get(
+                    "https://api.countapi.xyz/hit/fiberxottunique/a63f0cb8-cbaa-4783-aaca-3713157bfda2"
+                );
+            }
+        } catch (e) {}
+        return () => {};
+    }, []);
+
+    useEffect(() => {
         try {
             const NavbarHeight = document.querySelector("#Navbar").clientHeight;
             setNavbarHeight(NavbarHeight);
@@ -19,9 +35,11 @@ const Home = (props) => {
                 document.querySelector("#TopBanner").clientHeight;
             setTopBannerHeight(TopBannerHeight);
             const totalPageHeight = window.innerHeight;
-            setMainBannerHeight(
-                totalPageHeight - NavbarHeight - TopBannerHeight
-            );
+            if (window.innerWidth < 768) {
+                setMainBannerHeight(
+                    totalPageHeight - NavbarHeight - TopBannerHeight
+                );
+            }
         } catch (e) {}
 
         return () => {};
@@ -45,7 +63,7 @@ const Home = (props) => {
                 <div className="img-container">
                     <MainSwiper />
                 </div>
-                <div className="container flex items-center flex-col">
+                <div className="text-container flex items-center flex-col w-full">
                     <p className="text-center font-medium text-gray-400 text-sm w-3/4">
                         Are you still paying Hundreds in Premium of OTT
                         platform?
