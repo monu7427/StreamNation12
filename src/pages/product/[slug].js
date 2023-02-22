@@ -16,20 +16,19 @@ const ProductPage = ({ Product, Products }) => {
     }, []);
 
     useEffect(() => {
-        return () => {
-            axios.get(
-                "https://api.countapi.xyz/hit/fiverxottproduct/85ff71e4-b14b-4d77-a1f9-90efd2eac344"
-            );
-            try {
-                const visited = localStorage.getItem("pvisited");
-                if (!visited) {
-                    localStorage.setItem("pvisited", true);
-                    axios.get(
-                        "https://api.countapi.xyz/hit/fiverxottproductunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
-                    );
-                }
-            } catch (e) {}
-        };
+        axios.get(
+            "https://api.countapi.xyz/hit/fiverxottproduct/85ff71e4-b14b-4d77-a1f9-90efd2eac344"
+        );
+        try {
+            const visited = localStorage.getItem("pvisited");
+            if (!visited) {
+                localStorage.setItem("pvisited", true);
+                axios.get(
+                    "https://api.countapi.xyz/hit/fiverxottproductunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
+                );
+            }
+        } catch (e) {}
+        return () => {};
     }, []);
 
     const PriceCardRender = () =>
