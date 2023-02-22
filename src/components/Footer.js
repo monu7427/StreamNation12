@@ -8,8 +8,8 @@ const Footer = () => {
         { name: "Contact Us", url: "/contact", context: "/contact" },
         {
             name: "Report Fraud",
-            url: "/report-fraud",
-            context: "/report-fraud",
+            url: "/contact",
+            context: "/contact",
         },
         {
             name: "Refund Policy",
