@@ -14,14 +14,14 @@ const Home = (props) => {
     useEffect(() => {
         return () => {
             axios.get(
-                "https://api.countapi.xyz/hit/fiverxott/85ff71e4-b14b-4d77-a1f9-90efd2eac344"
+                "https://api.countapi.xyz/hit/fiverxott/e74ebe4f-4c0b-4da0-a62d-d1e915da349c"
             );
             try {
                 const visited = localStorage.getItem("visited");
                 if (!visited) {
                     localStorage.setItem("visited", true);
                     axios.get(
-                        "https://api.countapi.xyz/hit/fiberxottunique/562159af-3f7d-4be6-b390-8db4f33b5ef2"
+                        "https://api.countapi.xyz/hit/fiberxottunique/a63f0cb8-cbaa-4783-aaca-3713157bfda2"
                     );
                 }
             } catch (e) {}
