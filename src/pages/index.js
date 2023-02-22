@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AllPlatforms from "@/components/AllPlatforms";
 import Link from "next/link";
+import MainSwiper from "@/components/MainSwiper";
 
 const Home = (props) => {
     const [NavbarHeight, setNavbarHeight] = useState(0);
@@ -42,7 +43,7 @@ const Home = (props) => {
                 }}
             >
                 <div className="img-container">
-                    <img src="/images/banner.png" alt="banner" />
+                    <MainSwiper />
                 </div>
                 <div className="container flex items-center flex-col">
                     <p className="text-center font-medium text-gray-400 text-sm w-3/4">
