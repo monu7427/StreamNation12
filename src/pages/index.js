@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AllPlatforms from "@/components/AllPlatforms";
+import Link from "next/link";
 
 const Home = (props) => {
     const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
@@ -31,7 +32,7 @@ const Home = (props) => {
                     </p>
                     <h1 className="w-3/4 text-center">Fiberxott.com</h1>
                     <h2 className="w-3/4 text-center text-lg font-bold">
-                        Subscriptions starting from ₹19/month
+                        Subscriptions starting from ₹88/month
                     </h2>
                     <ul>
                         <li>
@@ -48,7 +49,11 @@ const Home = (props) => {
                         </li>
                     </ul>
                     <div className="button">
-                        <button>Claim 50% off on Netflix</button>
+                        <Link
+                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%0A*Coupon%20code%3A*%23FirstTime%0AI%20want%20Netflix%20account.%20Is%20discount%20still%20available%20on%20your%20Netflix.%0A`}
+                        >
+                            <button>Claim 50% off on Netflix</button>
+                        </Link>
                         <p className="text-[10px] text-gray-400 text-right">
                             only for limited users
                         </p>

@@ -1,17 +1,23 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
+    const Urls = [
+        { name: "Home", url: "/", context: "/" },
+        { name: "About Us", url: "/about", context: "/about" },
+        { name: "Contact Us", url: "/contact", context: "/contact" },
+    ];
     return (
         <section id="Footer">
             <h2>Fiberxott.com</h2>
             <div className="quick">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Refund Policy</li>
-                    <li>Terms and Conditions</li>
+                    {Urls.map((url, index) => (
+                        <li>
+                            <Link href={url.url}>{url.name}</Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className="report">

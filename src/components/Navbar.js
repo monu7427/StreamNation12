@@ -1,7 +1,23 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 const Navbar = () => {
+    const router = useRouter();
+    const [CurrentURL, setCurrentURL] = useState("");
+    useEffect(() => {
+        if (router.isReady) {
+            setCurrentURL(router.pathname);
+        }
+        return () => {};
+    }, [router.isReady]);
+
     const [NavbarStatus, setNavbarStatus] = useState(false);
+
+    const Urls = [
+        { name: "Home", url: "/", context: "/" },
+        { name: "About Us", url: "/about", context: "/about" },
+        { name: "Contact Us", url: "/contact", context: "/contact" },
+    ];
     return (
         <section id="Navbar">
             <div className="main-bar">
@@ -20,12 +36,24 @@ const Navbar = () => {
             </div>
             <div className={`mobile-menu ${NavbarStatus ? "active" : null}`}>
                 <ul>
-                    <li className="active link">Home</li>
-                    <li className="link">About Us</li>
-                    <li className="link">Contact Us</li>
-                    <li className="text-red-500 flex items-center  gap-2">
-                        Report fraud{" "}
-                        <i className="bx bx-info-circle bx-rotate-180"></i>
+                    {Urls.map((url, index) => (
+                        <li
+                            className={`${
+                                CurrentURL === url.context ? "active" : null
+                            }`}
+                            key={index}
+                        >
+                            <Link href={url.url}>{url.name}</Link>
+                        </li>
+                    ))}
+                    <li>
+                        <Link
+                            href="/contact"
+                            className="text-red-500 flex items-center  gap-2"
+                        >
+                            Report fraud
+                            <i className="bx bx-info-circle bx-rotate-180"></i>
+                        </Link>
                     </li>
                 </ul>
             </div>

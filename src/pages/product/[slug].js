@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import AllPlatforms from "@/components/AllPlatforms";
+import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const ProductPage = ({ Product, Products }) => {
     const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
@@ -28,7 +30,23 @@ const ProductPage = ({ Product, Products }) => {
                         <p>
                             Description: <span>{item.description}</span>
                         </p>
-                        <button>Get this Deal</button>
+                        <Link
+                            href={`https://wa.me/${
+                                process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
+                            }?text=Hi%2C%20I%20want%20${
+                                Product.name
+                            }%20available%20on%20your%20website.%0A*Plan%20details*%0A*Name*%3A%20${
+                                item.name
+                            }%0A*Price*%3A%20${item.price}%0A*Duration*%3A%20${
+                                item.count > 1
+                                    ? item.count + item.period
+                                    : item.count + item.period.slice(0, -1)
+                            }%0A*Description%3A*%20${
+                                item.description
+                            }%0A%0AIs%20it%20available%3F`}
+                        >
+                            <button>Get this Deal</button>
+                        </Link>
                     </div>
                 </div>
             );
@@ -63,15 +81,28 @@ const ProductPage = ({ Product, Products }) => {
                         <p className="text-[12px] bg-yellow-300 p-2 rounded text-center">
                             <i className="bx bx-info-circle mr-2"></i>
                             This website is under monitoring of{" "}
-                            <a href="#">deepdevelopers.in</a> for any problem
-                            contact us <a href="#">deepdevelopers.in</a> we will
-                            resolves
+                            <Link
+                                href="https://deepdevelopers.in"
+                                className="text-[#673ee6] font-bold underline"
+                            >
+                                {" "}
+                                deepdevelopers.in
+                            </Link>{" "}
+                            for any issue related to seller contact us at{" "}
+                            <a
+                                className="text-[#673ee6] font-bold underline"
+                                href="#"
+                            >
+                                jashandeep1659@gmail.com
+                            </a>{" "}
+                            we will resolve it.
                         </p>
                     </div>
                 </div>
             </div>
 
             <AllPlatforms Products={Products} />
+            <Footer />
         </section>
     );
 };
