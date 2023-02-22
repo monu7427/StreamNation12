@@ -5,7 +5,6 @@ import axios from "axios";
 import AllPlatforms from "@/components/AllPlatforms";
 import Link from "next/link";
 import MainSwiper from "@/components/MainSwiper";
-import axios from "axios";
 
 const Home = (props) => {
     const [NavbarHeight, setNavbarHeight] = useState(0);
