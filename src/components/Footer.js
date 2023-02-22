@@ -14,7 +14,7 @@ const Footer = () => {
                 <h3>Quick Links</h3>
                 <ul>
                     {Urls.map((url, index) => (
-                        <li>
+                        <li key={index}>
                             <Link href={url.url}>{url.name}</Link>
                         </li>
                     ))}
