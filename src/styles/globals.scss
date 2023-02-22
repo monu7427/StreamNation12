@@ -19,6 +19,18 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+img {
+    width: 100%;
+}
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    img {
+        width: 50px;
+    }
+}
 #Navbar {
     position: fixed;
     top: 0;
@@ -57,7 +69,7 @@ body {
 #Home {
     .main-banner {
         background-color: $secondary-color;
-        min-height: 100vh;
+        // min-height: 100vh;
         display: flex;
         justify-content: center;
         flex-direction: column;

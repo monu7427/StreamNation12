@@ -4,26 +4,46 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import AllPlatforms from "@/components/AllPlatforms";
 import Link from "next/link";
+import MainSwiper from "@/components/MainSwiper";
 
 const Home = (props) => {
-    const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
+    const [NavbarHeight, setNavbarHeight] = useState(0);
+    const [TopBannerHeight, setTopBannerHeight] = useState(0);
+    const [MainBannerHeight, setMainBannerHeight] = useState();
+
     useEffect(() => {
         try {
             const NavbarHeight = document.querySelector("#Navbar").clientHeight;
-            setTopPaddingForBanner(NavbarHeight);
+            setNavbarHeight(NavbarHeight);
+            const TopBannerHeight =
+                document.querySelector("#TopBanner").clientHeight;
+            setTopBannerHeight(TopBannerHeight);
+            const totalPageHeight = window.innerHeight;
+            setMainBannerHeight(
+                totalPageHeight - NavbarHeight - TopBannerHeight
+            );
         } catch (e) {}
+
         return () => {};
     }, []);
 
     return (
         <section id="Home">
+            <h1
+                className="font-bold text-sm  py-2 text-center bg-[#a6a6ff] text-white"
+                id="TopBanner"
+            >
+                Your trust is our worth
+            </h1>
             <Navbar />
             <div
                 className="main-banner"
-                style={{ paddingTop: TopPaddingForBanner + "px" }}
+                style={{
+                    minHeight: MainBannerHeight + "px",
+                }}
             >
                 <div className="img-container">
-                    <img src="/images/banner.png" alt="banner" />
+                    <MainSwiper />
                 </div>
                 <div className="container flex items-center flex-col">
                     <p className="text-center font-medium text-gray-400 text-sm w-3/4">

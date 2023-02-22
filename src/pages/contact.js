@@ -1,19 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const Contact = () => {
-    const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
-    useEffect(() => {
-        try {
-            const NavbarHeight = document.querySelector("#Navbar").clientHeight;
-            setTopPaddingForBanner(NavbarHeight);
-        } catch (e) {}
-        return () => {};
-    }, []);
-
     return (
-        <section id="About" style={{ paddingTop: TopPaddingForBanner + "px" }}>
+        <section id="About">
             <Navbar />
             <div className="container px-4 py-4">
                 <h1 className="text-xl font-black text-center mb-3">
