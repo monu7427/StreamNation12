@@ -5,6 +5,7 @@ import axios from "axios";
 import AllPlatforms from "@/components/AllPlatforms";
 import Link from "next/link";
 import MainSwiper from "@/components/MainSwiper";
+import DefaultMetaTags from "@/components/DefaultMetaTags";
 
 const Home = (props) => {
     const [NavbarHeight, setNavbarHeight] = useState(0);
@@ -53,6 +54,7 @@ const Home = (props) => {
             >
                 Your trust is our worth
             </h1>
+            <DefaultMetaTags />
             <Navbar />
             <div
                 className="main-banner"
