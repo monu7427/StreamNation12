@@ -24,14 +24,14 @@ const About = () => {
                     providing our customers with the best viewing experience, we
                     have served almost 10,000 satisfied users with our premium
                     services. Our mission is to make the latest and most popular
-                    content accessible to everyone at a price that won't break
-                    the bank. Our team at FiberXOTT is comprised of experts in
-                    the OTT industry who work tirelessly to ensure that our
-                    customers have access to the latest and greatest content. We
-                    pride ourselves on our exceptional customer service and are
-                    always here to help our customers with any questions or
-                    concerns. Thank you for choosing FiberXOTT as your go-to
-                    provider
+                    content accessible to everyone at a price that won&apos;t
+                    break the bank. Our team at FiberXOTT is comprised of
+                    experts in the OTT industry who work tirelessly to ensure
+                    that our customers have access to the latest and greatest
+                    content. We pride ourselves on our exceptional customer
+                    service and are always here to help our customers with any
+                    questions or concerns. Thank you for choosing FiberXOTT as
+                    your go-to provider
                 </p>
             </div>
         </section>
