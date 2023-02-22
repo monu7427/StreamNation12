@@ -27,7 +27,18 @@ const ProductPage = ({ Product, Products }) => {
                                 ? item.count + item.period
                                 : item.count + item.period.slice(0, -1)}
                         </h1>
-                        <p>
+                        <p className="my-2">
+                            Duration:{" "}
+                            <span>
+                                {item.count > 1
+                                    ? item.count + item.period
+                                    : item.count + item.period.slice(0, -1)}
+                            </span>
+                        </p>
+                        <p className="my-2">
+                            No. of devices: <span>1 Device</span>
+                        </p>
+                        <p className="my-2">
                             Description: <span>{item.description}</span>
                         </p>
                         <Link

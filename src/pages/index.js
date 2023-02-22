@@ -50,9 +50,9 @@ const Home = (props) => {
                     </ul>
                     <div className="button">
                         <Link
-                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%0A*Coupon%20code%3A*%23FirstTime%0AI%20want%20Netflix%20account.%20Is%20discount%20still%20available%20on%20your%20Netflix.%0A`}
+                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%0A*Coupon%20code%3A*%23FirstTime%0AI%20want%20Youtube%20Premium%20account.%20Is%20discount%20still%20available%20on%20your%20Netflix.%0A`}
                         >
-                            <button>Claim 50% off on Netflix</button>
+                            <button>Get 30-70% on YT premium</button>
                         </Link>
                         <p className="text-[10px] text-gray-400 text-right">
                             only for limited users
