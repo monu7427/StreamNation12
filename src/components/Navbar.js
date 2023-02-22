@@ -1,7 +1,24 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 const Navbar = () => {
+    const [NavbarStatus, setNavbarStatus] = useState(false);
+    const [NavbarHeight, setNavbarHeight] = useState(0);
+    const [NavbarPosition, setNavbarPosition] = useState("static");
+    const [PageScrolled, setPageScrolled] = useState(0);
+    if (PageScrolled > NavbarHeight && NavbarPosition !== "fixed") {
+        setNavbarPosition("fixed");
+    } else if (PageScrolled < NavbarHeight && NavbarPosition !== "static") {
+        setNavbarPosition("static");
+    }
+    useEffect(() => {
+        try {
+            const NavbarHeight = document.querySelector("#Navbar").clientHeight;
+            setNavbarHeight(NavbarHeight);
+        } catch (e) {}
+        return () => {};
+    }, []);
+
     const router = useRouter();
     const [CurrentURL, setCurrentURL] = useState("");
     useEffect(() => {
@@ -11,15 +28,27 @@ const Navbar = () => {
         return () => {};
     }, [router.isReady]);
 
-    const [NavbarStatus, setNavbarStatus] = useState(false);
-
     const Urls = [
         { name: "Home", url: "/", context: "/" },
         { name: "About Us", url: "/about", context: "/about" },
         { name: "Contact Us", url: "/contact", context: "/contact" },
     ];
+
+    const onScroll = useCallback((event) => {
+        const { pageYOffset, scrollY } = window;
+        setPageScrolled(pageYOffset);
+    }, []);
+
+    useEffect(() => {
+        //add eventlistener to window
+        window.addEventListener("scroll", onScroll, { passive: true });
+        // remove event on unmount to prevent a memory leak with the cleanup
+        return () => {
+            window.removeEventListener("scroll", onScroll, { passive: true });
+        };
+    }, []);
     return (
-        <section id="Navbar">
+        <section id="Navbar" style={{ position: NavbarPosition }}>
             <div className="main-bar">
                 <div className="logo">
                     <Link href="/">

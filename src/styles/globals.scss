@@ -26,6 +26,7 @@ img {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 50;
     img {
         width: 50px;
     }
@@ -68,7 +69,7 @@ img {
 #Home {
     .main-banner {
         background-color: $secondary-color;
-        min-height: 100vh;
+        // min-height: 100vh;
         display: flex;
         justify-content: center;
         flex-direction: column;

@@ -6,15 +6,6 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 const ProductPage = ({ Product, Products }) => {
-    const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
-    useEffect(() => {
-        try {
-            const NavbarHeight = document.querySelector("#Navbar").clientHeight;
-            setTopPaddingForBanner(NavbarHeight);
-        } catch (e) {}
-        return () => {};
-    }, []);
-
     const PriceCardRender = () =>
         Product.items.map((item, index) => {
             return (
@@ -64,10 +55,7 @@ const ProductPage = ({ Product, Products }) => {
         });
 
     return (
-        <section
-            id="ProductPage"
-            style={{ paddingTop: TopPaddingForBanner + "px" }}
-        >
+        <section id="ProductPage">
             <Navbar />
             <div className="container">
                 <img src={Product.banner} alt="banner" />
