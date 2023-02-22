@@ -1,8 +1,8 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import ProductCard from "@/components/ProductCard";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import AllPlatforms from "@/components/AllPlatforms";
 
 const Home = (props) => {
     const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
@@ -13,11 +13,6 @@ const Home = (props) => {
         } catch (e) {}
         return () => {};
     }, []);
-
-    const ProductsRender = () =>
-        props.Products.map((product, index) => {
-            return <ProductCard key={index} product={product} />;
-        });
 
     return (
         <section id="Home">
@@ -60,17 +55,7 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="all-platforms">
-                <h1 className="text-xl font-black text-center">Our Services</h1>
-                <ul className="filters">
-                    <li className="active">All</li>
-                    <li>OTT</li>
-                    <li>Music</li>
-                </ul>
-                <div className="cards">
-                    <ProductsRender />
-                </div>
-            </div>
+            <AllPlatforms Products={props.Products} />
             <Footer />
         </section>
     );

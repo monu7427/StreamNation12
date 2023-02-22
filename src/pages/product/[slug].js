@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import ProductCard from "@/components/ProductCard";
+import AllPlatforms from "@/components/AllPlatforms";
 
 const ProductPage = ({ Product, Products }) => {
     const [TopPaddingForBanner, setTopPaddingForBanner] = useState(0);
@@ -12,11 +12,6 @@ const ProductPage = ({ Product, Products }) => {
         } catch (e) {}
         return () => {};
     }, []);
-
-    const ProductsRender = () =>
-        Products.map((product, index) => {
-            return <ProductCard key={index} product={product} />;
-        });
 
     const PriceCardRender = () =>
         Product.items.map((item, index) => {
@@ -76,17 +71,7 @@ const ProductPage = ({ Product, Products }) => {
                 </div>
             </div>
 
-            <div className="all-platforms">
-                <h1 className="text-xl font-black text-center">Our Services</h1>
-                <ul className="filters">
-                    <li className="active">All</li>
-                    <li>OTT</li>
-                    <li>Music</li>
-                </ul>
-                <div className="cards">
-                    <ProductsRender />
-                </div>
-            </div>
+            <AllPlatforms Products={Products} />
         </section>
     );
 };
