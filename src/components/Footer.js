@@ -6,7 +6,11 @@ const Footer = () => {
         { name: "Home", url: "/", context: "/" },
         { name: "About Us", url: "/about", context: "/about" },
         { name: "Contact Us", url: "/contact", context: "/contact" },
-        { name: "Report Fraud", url: "/report", context: "/report" },
+        {
+            name: "Report Fraud",
+            url: "/report-fraud",
+            context: "/report-fraud",
+        },
         {
             name: "Refund Policy",
             url: "/refund-policy",
