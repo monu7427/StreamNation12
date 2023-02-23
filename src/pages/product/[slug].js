@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import AllPlatforms from "@/components/AllPlatforms";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Head from "next/head";
 
 const ProductPage = ({ Product, Products }) => {
     const [NavbarHeight, setNavbarHeight] = useState(0);
@@ -35,6 +36,70 @@ const ProductPage = ({ Product, Products }) => {
         Product.items.map((item, index) => {
             return (
                 <div className="pricing-card" key={index}>
+                    <Head>
+                        <meta
+                            name="description"
+                            content={`Get ${
+                                Product.name
+                            } account  at a cheaper price of just       ₹${
+                                item.price
+                            }/${
+                                item.count > 1
+                                    ? item.count + item.period
+                                    : item.count + item.period.slice(0, -1)
+                            }  with one device login. Get it now.`}
+                        />
+                        <meta
+                            name="keywords"
+                            content="OTT services, premium content, affordable pricing, online streaming, fiberxott"
+                        />
+                        <meta name="robots" content="index, follow" />
+                        <meta
+                            property="og:title"
+                            content={`${Product.name} - get it at cheap prices by FiberXOTT`}
+                        />
+                        <meta
+                            property="og:description"
+                            content={`Get ${
+                                Product.name
+                            } account  at a cheaper price of just       ₹${
+                                item.price
+                            }/${
+                                item.count > 1
+                                    ? item.count + item.period
+                                    : item.count + item.period.slice(0, -1)
+                            }  with one device login. Get it now.`}
+                        />
+                        <meta property="og:type" content="website" />
+                        <meta
+                            property="og:url"
+                            content="https://www.fiberxott.com/"
+                        />
+                        <meta
+                            name="twitter:title"
+                            content={`${Product.name} - get it at cheap prices by FiberXOTT`}
+                        />
+                        <meta
+                            name="twitter:description"
+                            content={`Get ${
+                                Product.name
+                            } account  at a cheaper price of just       ₹${
+                                item.price
+                            }/${
+                                item.count > 1
+                                    ? item.count + item.period
+                                    : item.count + item.period.slice(0, -1)
+                            }  with one device login. Get it now.`}
+                        />
+
+                        <meta
+                            name="twitter:card"
+                            content="summary_large_image"
+                        />
+                        <title>
+                            {Product.name} - get it at cheap prices by FiberXOTT
+                        </title>
+                    </Head>
                     <div className="header">
                         <h2>{item.name}</h2>
                         <h1>
