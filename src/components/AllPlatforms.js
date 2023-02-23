@@ -64,6 +64,14 @@ const AllPlatforms = ({ Products }) => {
                 >
                     Music
                 </li>
+                <li
+                    className={`${
+                        CategorySelected === "professional" ? "active" : ""
+                    } cursor-pointer`}
+                    onClick={() => setCategorySelected("professional")}
+                >
+                    Professional
+                </li>
             </ul>
             <div className="cards  ">
                 <ProductsRender />
