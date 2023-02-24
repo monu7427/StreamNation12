@@ -222,6 +222,58 @@ export async function getStaticProps(context) {
     );
     Product = await Product.json();
 
+    let Product1 = {
+        _id: "63f4bcc96f636266b083809a",
+        name: "Netflix premium account",
+        description:
+            "At Netflix, we want to entertain the world. Whatever your taste, and no matter where you live, we give you access to best-in-class TV series, documentaries, feature films and mobile games. Our members control what they want to watch, when they want it, in one simple subscription. We’re streaming in more than 30 languages and 190 countries, ",
+        category: "ott",
+        img: "https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png",
+        banner: "https://variety.com/wp-content/uploads/2020/05/netflix-logo.png",
+        stock: true,
+        items: [
+            {
+                name: "1 Month shared profile",
+                price: 88,
+                description:
+                    "This plan comes at ₹88 per month and offers a shared Netflix account with one sharing profile, exclusively for one device. Enjoy unlimited access to a vast library of movies.",
+                period: "months",
+                count: 1,
+                _id: "63f4bcc96f636266b083809b",
+            },
+            {
+                name: "1 Month Private Profile",
+                price: 109,
+                description:
+                    "This plan comes at ₹109 per month and offers a sharing Netflix account with one private profile, exclusively for your use. Enjoy unlimited access to a vast library of movies.",
+                period: "months",
+                count: 1,
+                _id: "63f4ed1f9e72f18feb898956",
+            },
+            {
+                name: "3 Months shared Profile",
+                price: 250,
+                description:
+                    "This plan comes at ₹250 for 3 months and offers a shared Netflix account with one shared profile, exclusively for one device. Enjoy unlimited access to a vast library of movies",
+                period: "months",
+                count: 3,
+                _id: "63f4ed1f9e72f18feb898957",
+            },
+            {
+                name: "3 Months private Profile",
+                price: 300,
+                description:
+                    "This plan comes at ₹300 for 3 months and offers a private Netflix account with one private profile, exclusively for your use. Enjoy unlimited access to a vast library of movies.",
+                period: "months",
+                count: 3,
+                _id: "63f4ed1f9e72f18feb898958",
+            },
+        ],
+        created_at: "2023-02-21T12:44:57.448Z",
+        slug: "netflix-premium-account",
+        __v: 0,
+    };
+
     // const Product = await axios.get(
     //     `${process.env.NEXT_PUBLIC_DATABASE_URL}/${slug}`
     // );
@@ -230,7 +282,7 @@ export async function getStaticProps(context) {
     return {
         props: {
             Products,
-            Product: Product,
+            Product: Product1,
         }, // will be passed to the page component as props
     };
 }
