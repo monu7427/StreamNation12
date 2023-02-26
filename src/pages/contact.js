@@ -30,6 +30,15 @@ const Contact = () => {
                             @fiberx_ott
                         </Link>
                     </li>
+                    <li>
+                        Email:{" "}
+                        <Link
+                            className="text-[#673ee6]  underline"
+                            href="mailto:customer.care@fiberxott.com"
+                        >
+                            customer.care@fiberxott.com
+                        </Link>
+                    </li>
                 </ul>
 
                 <h2 className="text-md font-bold my-2 mt-8">
