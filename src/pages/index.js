@@ -72,7 +72,7 @@ const Home = (props) => {
                     </p>
                     <h1 className="w-3/4 text-center">Fiberxott.com</h1>
                     <h2 className="w-3/4 text-center text-lg font-bold">
-                        For new customer YouTube premium ₹99/4months
+                        For new customer YouTube premium ₹69/4months
                     </h2>
                     <ul>
                         <li>
