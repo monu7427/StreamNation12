@@ -20,6 +20,9 @@ export default function MainSwiper() {
                 modules={[Autoplay]}
             >
                 <SwiperSlide>
+                    <img src="/images/banner0.png" alt="banner" />
+                </SwiperSlide>
+                <SwiperSlide>
                     <img src="/images/banner.png" alt="banner" />
                 </SwiperSlide>
                 <SwiperSlide>
