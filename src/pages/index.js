@@ -65,14 +65,14 @@ const Home = (props) => {
                 <div className="img-container">
                     <MainSwiper />
                 </div>
-                <div className="text-container flex items-center flex-col w-full">
-                    <p className="text-center font-medium text-gray-400 text-sm w-3/4">
+                <div className="flex flex-col items-center w-full text-container">
+                    <p className="w-3/4 text-sm font-medium text-center text-gray-400">
                         Are you still paying Hundreds in Premium of OTT
                         platform?
                     </p>
                     <h1 className="w-3/4 text-center">Fiberxott.com</h1>
-                    <h2 className="w-3/4 text-center text-lg font-bold">
-                        For new customer YouTube premium ₹69/4months
+                    <h2 className="w-3/4 text-lg font-bold text-center">
+                        For new customer Amazon prime ₹1/1month
                     </h2>
                     <ul>
                         <li>
@@ -90,9 +90,9 @@ const Home = (props) => {
                     </ul>
                     <div className="button">
                         <Link
-                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%0A*Coupon%20code%3A*%23FirstTime%0AI%20want%20Youtube%20Premium%20account.%20Is%20discount%20still%20available%20on%20your%20website.%0A`}
+                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%20I%20am%20new%20customer%20is%20the%20prime%20video%20in%201rs%20offer%20still%20valid.`}
                         >
-                            <button>Save 30% on YT premium</button>
+                            <button>Grab the deal</button>
                         </Link>
                         <p className="text-[10px] text-gray-400 text-right">
                             only for limited users
