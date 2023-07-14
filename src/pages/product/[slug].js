@@ -157,42 +157,21 @@ const ProductPage = ({ Product, Products }) => {
                     />
                 </div>
 
-                <div className="content my-4">
+                <div className="my-4 content">
                     <h1 className="text-2xl font-bold text-center">
                         {Product.name}
                     </h1>
-                    <p className="text-sm font-medium text-gray-400 my-4 text-center">
+                    <p className="my-4 text-sm font-medium text-center text-gray-400">
                         {Product.description}
                     </p>
 
                     <div className="plans">
-                        <h1 className="text-center text-2xl font-bold ">
+                        <h1 className="text-2xl font-bold text-center ">
                             Our plans
                         </h1>
                         <div className="pricing-cards">
                             <PriceCardRender />
                         </div>
-                    </div>
-                    <div className="fraud-report ">
-                        <p className="text-[12px] bg-yellow-300 p-2 rounded text-center">
-                            <i className="bx bx-info-circle mr-2"></i>
-                            This website is under monitoring of{" "}
-                            <Link
-                                href="https://deepdevelopers.in"
-                                className="text-[#673ee6] font-bold underline"
-                            >
-                                {" "}
-                                deepdevelopers.in
-                            </Link>{" "}
-                            for any issue related to seller contact us at{" "}
-                            <a
-                                className="text-[#673ee6] font-bold underline"
-                                href="#"
-                            >
-                                jashandeep1659@gmail.com
-                            </a>{" "}
-                            we will resolve it.
-                        </p>
                     </div>
                 </div>
             </div>

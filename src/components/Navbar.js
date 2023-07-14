@@ -60,12 +60,12 @@ const Navbar = () => {
                     className="md:hidden"
                 >
                     {NavbarStatus ? (
-                        <i className="bx bx-x text-2xl"></i>
+                        <i className="text-2xl bx bx-x"></i>
                     ) : (
-                        <i className="bx bx-menu text-2xl"></i>
+                        <i className="text-2xl bx bx-menu"></i>
                     )}
                 </button>
-                <ul className="hidden md:flex items-center gap-4">
+                <ul className="items-center hidden gap-4 md:flex">
                     {Urls.map((url, index) => (
                         <li
                             className={`${
@@ -76,15 +76,6 @@ const Navbar = () => {
                             <Link href={url.url}>{url.name}</Link>
                         </li>
                     ))}
-                    <li>
-                        <Link
-                            href="/contact"
-                            className="text-red-500 flex items-center  gap-2 bg-white rounded px-4 py-2"
-                        >
-                            Report fraud
-                            <i className="bx bx-info-circle bx-rotate-180"></i>
-                        </Link>
-                    </li>
                 </ul>
             </div>
             <div className={`mobile-menu ${NavbarStatus ? "active" : null}`}>
@@ -99,15 +90,6 @@ const Navbar = () => {
                             <Link href={url.url}>{url.name}</Link>
                         </li>
                     ))}
-                    <li>
-                        <Link
-                            href="/contact"
-                            className="text-red-500 flex items-center  gap-2"
-                        >
-                            Report fraud
-                            <i className="bx bx-info-circle bx-rotate-180"></i>
-                        </Link>
-                    </li>
                 </ul>
             </div>
         </section>
