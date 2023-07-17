@@ -52,7 +52,7 @@ const Home = (props) => {
                 className="font-bold text-sm  py-2 text-center bg-[#a6a6ff] text-white"
                 id="TopBanner"
             >
-                Your trust is our worth
+                Honesty is our Policy
             </h1>
             <DefaultMetaTags />
             <Navbar />
