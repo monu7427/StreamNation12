@@ -72,7 +72,7 @@ const Home = (props) => {
                     </p>
                     <h1 className="w-3/4 text-center">Fiberxott.com</h1>
                     <h2 className="w-3/4 text-lg font-bold text-center">
-                        For new customer Amazon prime ₹1/1month
+                        For new customer Amazon prime ₹112/1month
                     </h2>
                     <ul>
                         <li>
