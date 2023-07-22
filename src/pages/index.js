@@ -90,7 +90,7 @@ const Home = (props) => {
                     </ul>
                     <div className="button">
                         <Link
-                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%20I%20am%20new%20customer%20is%20the%20prime%20video%20in%201rs%20offer%20still%20valid.`}
+                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi%2C%20I%20am%20new%20customer%20is%20the%20prime%20video%20in%2012rs%20offer%20still%20valid.`}
                         >
                             <button>Grab the deal</button>
                         </Link>
