@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="report">
           <h3>Customer Trust and Growth Highlights</h3>
           <p>
-            Over the past three years, we've had the privilege of serving an
+            Over the past three years, we have had the privilege of serving an
             ever-growing customer base, exceeding 10,000 satisfied clients. Our
             commitment is evident in the reception of more than 500 daily
             orders, a testament to the trust and satisfaction our customers
