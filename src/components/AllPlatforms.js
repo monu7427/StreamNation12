@@ -14,7 +14,7 @@ const AllPlatforms = ({ Products }) => {
   return (
     <div className="all-platforms">
       <h1 className="text-xl font-black text-center">Our Services</h1>
-      <ul className="filters ">
+      <ul className="filters  ">
         <li
           className={`${
             CategorySelected === "all" ? "active" : ""
