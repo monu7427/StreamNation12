@@ -3,27 +3,18 @@ import React from "react";
 
 const About = () => {
     return (
-        <section id="About">
+        <section id="About" className="bg-blue-200">
             <Navbar />
-            <div className="container px-4 py-4">
-                <h1 className="text-xl font-black text-center mb-3">
-                    About Us
-                </h1>
-                <p className="font-medium text-gray-400 text-center">
-                    Welcome to FiberXOTT, a leading provider of premium OTT
-                    services at affordable pricing. With a commitment to
-                    providing our customers with the best viewing experience, we
-                    have served almost 10,000 satisfied users with our premium
-                    services. Our mission is to make the latest and most popular
-                    content accessible to everyone at a price that won&apos;t
-                    break the bank. Our team at FiberXOTT is comprised of
-                    experts in the OTT industry who work tirelessly to ensure
-                    that our customers have access to the latest and greatest
-                    content. We pride ourselves on our exceptional customer
-                    service and are always here to help our customers with any
-                    questions or concerns. Thank you for choosing FiberXOTT as
-                    your go-to provider
-                </p>
+            <div className="container mx-auto px-4 py-8">
+                <div className="text-center mb-8">
+                    <h1 className="text-3xl font-bold mb-3">About Us</h1>
+                    <p className="font-medium text-gray-700">
+                        Welcome to StreamNation, a premier provider of top-tier OTT services at competitive prices. With a steadfast commitment to delivering unparalleled viewing experiences, we've delighted nearly 10,000 satisfied users with our exceptional services. Our primary goal is to democratize access to the latest and most sought-after content, ensuring it's within reach for everyone without straining their budget. At StreamNation, our dedicated team comprises industry experts who tirelessly curate the finest content for our customers. We take pride in our outstanding customer service and remain readily available to assist with any inquiries or concerns. Thank you for entrusting StreamNation as your preferred streaming service provider.
+                    </p>
+                    <p className="mt-4">
+                        For inquiries, partnership opportunities, or any other questions, feel free to reach out to us at <a href="mailto:info@streamnation.com" className="text-blue-500">info@streamnation.com</a>.
+                    </p>
+                </div>
             </div>
         </section>
     );

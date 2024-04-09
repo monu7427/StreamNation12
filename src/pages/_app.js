@@ -1,6 +1,7 @@
 import Whatsapp from "@/components/whatsapp";
 import "@/styles/globals.scss";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 export default function App({ Component, pageProps }) {
     return (
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
             </Head>
             <Whatsapp />
             <Component {...pageProps} />
+            
         </>
     );
 }

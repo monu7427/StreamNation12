@@ -4,55 +4,63 @@ import React from "react";
 
 const Contact = () => {
     return (
-        <section id="About">
+     <>
+     
+     <section id="Contact" className="bg-blue-200">
             <Navbar />
-            <div className="container px-4 py-4">
-                <h1 className="text-xl font-black text-center mb-3">
+            <div className="container mx-auto px-4 py-8">
+                <h1 className="text-3xl font-bold text-center mb-6">
                     Contact Us
                 </h1>
-                <h2 className="text-md font-bold my-2">Contact Seller</h2>
-                <ul>
-                    <li>
-                        Whatsapp:{" "}
-                        <Link
-                            className="text-[#673ee6]  underline"
-                            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi`}
-                        >
-                            {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}
-                        </Link>
-                    </li>
-                    <li>
-                        Instagram:{" "}
-                        <Link
-                            className="text-[#673ee6]  underline"
-                            href={"https://www.instagram.com/fiberx_ott/"}
-                        >
-                            @fiberx_ott
-                        </Link>
-                    </li>
-                    <li>
-                        Email:{" "}
-                        <Link
-                            className="text-[#673ee6]  underline"
-                            href="mailto:customer.care@fiberxott.com"
-                        >
-                            customer.care@fiberxott.com
-                        </Link>
-                    </li>
-                </ul>
-
-                <h2 className="text-md font-bold my-2 mt-8">
-                    Contact Deep Developers
-                </h2>
-                <p>
-                    For any fraud done by seller or any issue with seller feel
-                    free to contact us. Drop mail us at{" "}
-                    <a className="text-[#673ee6] underline" href="">
-                        jashandeep@gmail.com
-                    </a>
-                </p>
+                <div className="max-w-md mx-auto">
+                    <div className="mb-6">
+                        <h2 className="text-lg font-semibold mb-2">Contact Seller</h2>
+                        <ul>
+                            <li className="mb-2">
+                                Whatsapp:{" "}
+                                <Link
+                                    className="text-blue-600 hover:underline"
+                                    href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Hi`}
+                                >
+                                    {process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}
+                                </Link>
+                            </li>
+                            <li className="mb-2">
+                                Instagram:{" "}
+                                <Link
+                                    className="text-purple-600 hover:underline"
+                                    href={"https://www.instagram.com/streamnation/"}
+                                >
+                                    @streamnation
+                                </Link>
+                            </li>
+                            <li className="mb-2">
+                                Email:{" "}
+                                <Link
+                                    className="text-purple-600 hover:underline"
+                                    href="mailto:customer.care@streamnation.com"
+                                >
+                                    customer.care@streamnation.com
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-semibold mb-2">Developer: Manoj Sharma</h2>
+                        <p className="mb-6">
+                            For any fraud done by seller or any issue with seller, feel
+                            free to contact us. Drop us a mail at{" "}
+                            <a className="text-purple-600 hover:underline" href="mailto:monusharma078607@gmail.com">
+                                monusharma078607@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
+        
+     
+     </>
     );
 };
 

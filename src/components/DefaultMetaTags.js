@@ -6,35 +6,34 @@ const DefaultMetaTags = () => {
         <Head>
             <meta
                 name="description"
-                content="FiberXOTT is a leading provider of premium OTT services, delivering the latest and most popular content at a price that won't break the bank."
+                content="StreamNation is a premier provider of top-tier OTT services, offering the latest and most sought-after content at competitive prices."
             />
             <meta
                 name="keywords"
-                content="OTT services, premium content, affordable pricing, online streaming, fiberxott"
+                content="OTT services, premium content, affordable pricing, online streaming, streamnation"
             />
             <meta name="robots" content="index, follow" />
             <meta
                 property="og:title"
-                content="FiberXOTT - Premium OTT Services at Affordable Pricing"
+                content="StreamNation - Top-Tier OTT Services at Competitive Prices"
             />
             <meta
                 property="og:description"
-                content="FiberXOTT is a leading provider of premium OTT services, delivering the latest and most popular content at a price that won't break the bank."
+                content="StreamNation is a premier provider of top-tier OTT services, offering the latest and most sought-after content at competitive prices."
             />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://www.fiberxott.com/" />
+            <meta property="og:url" content="https://www.streamnation.com/" />
             <meta
                 name="twitter:title"
-                content="FiberXOTT - Premium OTT Services at Affordable Pricing"
+                content="StreamNation - Top-Tier OTT Services at Competitive Prices"
             />
             <meta
                 name="twitter:description"
-                content="FiberXOTT is a leading provider of premium OTT services, delivering the latest and most popular content at a price that won't break the bank."
+                content="StreamNation is a premier provider of top-tier OTT services, offering the latest and most sought-after content at competitive prices."
             />
-
             <meta name="twitter:card" content="summary_large_image" />
             <title>
-                FiberXOTT - Premium OTT Services at Affordable Pricing
+                StreamNation - Top-Tier OTT Services at Competitive Prices
             </title>
         </Head>
     );

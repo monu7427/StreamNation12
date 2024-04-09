@@ -45,12 +45,7 @@ const Home = (props) => {
 
   return (
     <section id="Home">
-      <h1
-        className="font-bold text-sm  py-2 text-center bg-[#a6a6ff] text-white"
-        id="TopBanner"
-      >
-        Honesty is our Policy
-      </h1>
+    
       <DefaultMetaTags />
       <Navbar />
       <div
@@ -59,14 +54,14 @@ const Home = (props) => {
           minHeight: MainBannerHeight + "px",
         }}
       >
-        <div className="img-container">
-          <MainSwiper />
-        </div>
+       
         <div className="flex flex-col items-center w-full text-container">
+          
           <p className="w-3/4 text-sm font-medium text-center text-gray-400">
-            Are you still paying Hundreds in Premium of OTT platform?
+           
+Are you feeling the pinch of high-priced subscriptions for premium OTT platforms?
           </p>
-          <h1 className="w-3/4 text-center">Fiberxott.com</h1>
+          <h1 className="w-3/4 text-center">StreamNation.com</h1>
           <h2 className="w-3/4 text-lg font-bold text-center">
             GET 4K NETFLIX SUBSCRIPTION AT JUST 125/- PER MONTH
           </h2>
@@ -94,6 +89,9 @@ const Home = (props) => {
               only for limited users
             </p>
           </div>
+        </div>
+         <div className="img-container">
+          <MainSwiper />
         </div>
       </div>
       <AllPlatforms Products={props.Products} />

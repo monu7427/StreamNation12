@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="main-bar">
                 <div className="logo">
                     <Link href="/">
-                        <img src="/logo.png" alt="logo" />
+                        <img src="/logo.png" alt="logo" className="w-20 h-13" />
                     </Link>
                 </div>
                 <button

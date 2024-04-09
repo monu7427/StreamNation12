@@ -1,63 +1,71 @@
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
+
 const AllPlatforms = ({ Products }) => {
   const [CategorySelected, setCategorySelected] = useState("all");
-  const ProductsRender = () =>
-    Products.map((product, index) => {
-      if (CategorySelected === "all") {
-        return <ProductCard key={index} product={product} />;
-      }
-      if (CategorySelected === product.category) {
-        return <ProductCard key={index} product={product} />;
-      }
-    });
+
+  const filterProducts = () => {
+    if (CategorySelected === "all") {
+      return Products.map((product, index) => (
+        <ProductCard key={index} product={product} />
+      ));
+    } else {
+      const filteredProducts = Products.filter(
+        (product) => product.category === CategorySelected
+      );
+      return filteredProducts.map((product, index) => (
+        <ProductCard key={index} product={product} />
+      ));
+    }
+  };
+
   return (
     <div className="all-platforms">
-      <h1 className="text-xl font-black text-center">Our Services</h1>
-      <ul className="filters  ">
+      <h1 className="text-2xl font-black text-center">All Platforms</h1>
+      <ul className="filters flex justify-center mt-4   p-10  rounded-lg bg-black">
         <li
-          className={`${
-            CategorySelected === "all" ? "active" : ""
-          } cursor-pointer`}
+          className={`filter-item cursor-pointer ${
+            CategorySelected === "all" && "active"
+          }`}
           onClick={() => setCategorySelected("all")}
         >
           All
         </li>
         <li
-          className={`${
-            CategorySelected === "ott" ? "active" : ""
-          } cursor-pointer`}
+          className={`filter-item cursor-pointer ${
+            CategorySelected === "ott" && "active"
+          }`}
           onClick={() => setCategorySelected("ott")}
         >
           OTT
         </li>
         <li
-          className={`${
-            CategorySelected === "music" ? "active" : ""
-          } cursor-pointer`}
+          className={`filter-item cursor-pointer ${
+            CategorySelected === "music" && "active"
+          }`}
           onClick={() => setCategorySelected("music")}
         >
           Music
         </li>
         <li
-          className={`${
-            CategorySelected === "professional" ? "active" : ""
-          } cursor-pointer`}
+          className={`filter-item cursor-pointer ${
+            CategorySelected === "professional" && "active"
+          }`}
           onClick={() => setCategorySelected("professional")}
         >
           Professional
         </li>
         <li
-          className={`${
-            CategorySelected === "oyn" ? "active" : ""
-          } cursor-pointer`}
+          className={`filter-item cursor-pointer ${
+            CategorySelected === "oyn" && "active"
+          }`}
           onClick={() => setCategorySelected("oyn")}
         >
           On Your Number
         </li>
       </ul>
-      <div className="cards  ">
-        <ProductsRender />
+      <div className="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+        {filterProducts()}
       </div>
     </div>
   );

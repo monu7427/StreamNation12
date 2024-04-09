@@ -50,12 +50,12 @@ const ProductPage = ({ Product, Products }) => {
             />
             <meta
               name="keywords"
-              content="OTT services, premium content, affordable pricing, online streaming, fiberxott"
+              content="OTT services, premium content, affordable pricing, online streaming, StreamNationt"
             />
             <meta name="robots" content="index, follow" />
             <meta
               property="og:title"
-              content={`${Product.name} - get it at cheap prices by FiberXOTT`}
+              content={`${Product.name} - get it at cheap prices by StreamNation`}
             />
             <meta
               property="og:description"
@@ -68,10 +68,10 @@ const ProductPage = ({ Product, Products }) => {
               }  with one device login. Get it now.`}
             />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://www.fiberxott.com/" />
+            <meta property="og:url" content="https://www.StreamNation.com/" />
             <meta
               name="twitter:title"
-              content={`${Product.name} - get it at cheap prices by FiberXOTT`}
+              content={`${Product.name} - get it at cheap prices by StreamNation`}
             />
             <meta
               name="twitter:description"
@@ -85,7 +85,7 @@ const ProductPage = ({ Product, Products }) => {
             />
 
             <meta name="twitter:card" content="summary_large_image" />
-            <title>{Product.name} - get it at cheap prices by FiberXOTT</title>
+            <title>{Product.name} - get it at cheap prices by StreamNation</title>
           </Head>
           <div className="header">
             <h2>{item.name}</h2>

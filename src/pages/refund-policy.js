@@ -10,17 +10,8 @@ const RefundPolicy = () => {
                     Refund Policy
                 </h1>
                 <p className="font-medium text-gray-400 text-center">
-                    We have a refund policy in place for our customers at
-                    FiberXOTT. If for any reason, you do not receive your
-                    accounts credentials within 15 hours of making payment, you
-                    are eligible for a full refund. However, once the accounts
-                    credentials have been delivered, we will not be able to
-                    grant any refunds. We stand behind the quality of our
-                    services and strive to deliver on time to ensure our
-                    customers have the best possible experience with us. If you
-                    have any questions or concerns, please do not hesitate to
-                    reach out to our customer service team, who are always here
-                    to assist you.
+                   
+At StreamNation, we uphold a robust refund policy to safeguard the interests of our valued customers. Should you fail to receive your account credentials within 15 hours of payment, you are entitled to a full refund. Once the account credentials have been successfully delivered, we regret that we cannot accommodate further refunds. Our commitment to delivering timely services underscores our dedication to providing an exceptional customer experience. Should you require any assistance or have inquiries, our customer service team is at your disposal and ready to assist you promptly.
                 </p>
             </div>
         </section>
