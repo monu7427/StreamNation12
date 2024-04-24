@@ -1,6 +1,12 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/about": "pages/about.html",
+  "/api/hello": "pages/api/hello.js",
+  "/contact": "pages/contact.html",
+  "/refund-policy": "pages/refund-policy.html",
+  "/": "pages/index.js",
+  "/product/[slug]": "pages/product/[slug].js",
+  "/404": "pages/404.html"
 }
