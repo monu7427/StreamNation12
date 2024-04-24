@@ -29,9 +29,9 @@ const Contact = () => {
                                 Instagram:{" "}
                                 <Link
                                     className="text-purple-600 hover:underline"
-                                    href={"https://www.instagram.com/streamnation/"}
+                                    href={"https://www.instagram.com/streamnation_0tt?igsh=d3FuZXIwc3VsdzB3"}
                                 >
-                                    @streamnation
+                                    @streamnation_0tt
                                 </Link>
                             </li>
                             <li className="mb-2">
@@ -40,7 +40,7 @@ const Contact = () => {
                                     className="text-purple-600 hover:underline"
                                     href="mailto:customer.care@streamnation.com"
                                 >
-                                    customer.care@streamnation.com
+                                    streamnation0ttt@gmail.com
                                 </Link>
                             </li>
                         </ul>
